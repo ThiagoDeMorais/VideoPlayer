@@ -18,6 +18,10 @@ function stop(){
     video.pause();
     video.currentTime = 0 ;
     video.playbackRate = 1;
+    if(flag == 1){
+        document.getElementById("playPause").src = "../resources/play.png";
+        flag = 0;
+    }
 
 }
 

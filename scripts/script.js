@@ -1,14 +1,15 @@
-let video = document.getElementById("video1");
-let flag = 0;
+var video = document.getElementById("video1");
+var flagPlay = 0;
+var flagMute = 0;
 
 function play(img){
-    if(flag==0){
+    if(flagPlay==0){
         video.play();
-        flag = 1;
+        flagPlay = 1;
         document.getElementById("playPause").src = "../resources/pause.png";
     }else{
         video.pause();
-        flag = 0;
+        flagPlay = 0;
         document.getElementById("playPause").src = "../resources/play.png";
 
     }
@@ -18,10 +19,11 @@ function stop(){
     video.pause();
     video.currentTime = 0 ;
     video.playbackRate = 1;
-    if(flag == 1){
+    if(flagPlay == 1){
         document.getElementById("playPause").src = "../resources/play.png";
-        flag = 0;
+        flagPlay = 0;
     }
+    ChangeIconVol();
 
 }
 
@@ -63,7 +65,33 @@ function OutVol(){
 
 
 function volume(){
-   let vol =  document.getElementById("intensityControl").value;
-   let video = document.getElementById("video1");
-   video.volume = vol;
+    let vol =  document.getElementById("intensityControl").value;
+    video.volume = vol;
+    ChangeIconVol()
+}
+
+function ChangeIconVol(){
+    let vol =  document.getElementById("intensityControl").value;
+    if(vol>0 && vol<0.5){
+        document.getElementById("vol").src = "../resources/audio_intensity_one.png";
+     } else if(vol>=0.5){
+        document.getElementById("vol").src = "../resources/audio_intensity_two.png";
+
+    }else{
+        document.getElementById("vol").src = "../resources/audio_intensity_zero.png";
+
+    }
+}
+
+function Mute(){
+    if(flagMute == 0){
+        document.getElementById("intensityControl").value = 0;
+        flagMute = 1;
+    }else{
+        document.getElementById("intensityControl").value = 0.2;
+        flagMute = 0;
+    }
+    ChangeIconVol();
+    volume();
+
 }

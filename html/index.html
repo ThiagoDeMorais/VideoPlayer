@@ -8,14 +8,15 @@
 <body>
     <div   class = "container">
         <video  id = "video1" class = "video" src="../resources/movie480.webm" poster = "../resources/banner.jpg"></video>
-        <div onmouseenter = "OntoVideo(this.style)" onmouseleave = "OutVideo(this.style)" class = "controle">
+        <div class = "controle" onmouseenter = "OntoVideo(this.style)" onmouseleave = "OutVideo(this.style)" >
             <img id = "playPause" class = "btn" onclick="play()" src = "../resources/play.png">
             <img class = "btn" onclick="stop()" src = "../resources/stop.png">
             <img class = "btn" onclick="decrease()" src = "../resources/decrease.png">
             <img class = "btn" onclick="increase()" src = "../resources/increase.png">
             <img class = "btn" onclick = "jump_back()" src = "../resources/jump_back.png">
             <img class = "btn" onclick = "jump_forward()" src = "../resources/jump_foward.png">
-
+            <img id = "vol "class = "btn" onmouseenter = "OntoVol()"  onclick = "jump_forward()" src = "../resources/audio_intensity_one.png">
+            <input id = "intensityControl" onchange="volume()" type="range" min = "0" max = "1" step="0.01">
 
         </div>
 

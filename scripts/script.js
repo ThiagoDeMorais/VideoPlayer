@@ -43,21 +43,27 @@ function jump_forward(){
 
 
 function OntoVideo(style){
-    console.log(style);
     style.opacity = 100 + "%";
 }
 
 function OutVideo(style){
-    console.log(style);
     console.log(style.opacity);
     style.opacity = 0 + "%";
+    OutVol();
+}
+
+function OntoVol(){
+    document.getElementById("intensityControl").style.opacity = 100 + "%";
+
+}
+
+function OutVol(){
+    document.getElementById("intensityControl").style.opacity = 0 + "%";
 }
 
 
-function IncreaseOpacityContainer(){
-
-}
-
-function DecreaseOpacityContainer(){
-
+function volume(){
+   let vol =  document.getElementById("intensityControl").value;
+   let video = document.getElementById("video1");
+   video.volume = vol;
 }

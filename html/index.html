@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel = "stylesheet" type = "text/css" href = "../styles/style.css"> 
+</head>
+<body>
+    <div   class = "container">
+        <video  id = "video1" class = "video" src="../resources/movie480.webm" poster = "../resources/banner.jpg"></video>
+        <div onmouseenter = "OntoVideo(this.style)" onmouseleave = "OutVideo(this.style)" class = "controle">
+            <img id = "playPause" class = "btn" onclick="play()" src = "../resources/play.png">
+            <img class = "btn" onclick="stop()" src = "../resources/stop.png">
+            <img class = "btn" onclick="decrease()" src = "../resources/decrease.png">
+            <img class = "btn" onclick="increase()" src = "../resources/increase.png">
+            <img class = "btn" onclick = "jump_back()" src = "../resources/jump_back.png">
+            <img class = "btn" onclick = "jump_forward()" src = "../resources/jump_foward.png">
+
+
+        </div>
+
+    </div>
+    <footer>
+        <div class = "rodape">
+            Ícones feitos por <a href="https://www.flaticon.com/br/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a>
+        </div>
+    </footer>    
+<script src = "../scripts/script.js"></script>
+</body>
+</html>

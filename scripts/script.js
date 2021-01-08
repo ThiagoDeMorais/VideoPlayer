@@ -1,7 +1,7 @@
 var video = document.getElementById("video1");
 var flagPlay = 0;
 var flagMute = 0;
-
+var dataMute = 0;
 function play(img){
     if(flagPlay==0){
         video.play();
@@ -24,7 +24,6 @@ function stop(){
         flagPlay = 0;
     }
     ChangeIconVol();
-
 }
 
 function decrease(){
@@ -67,6 +66,9 @@ function OutVol(){
 function volume(){
     let vol =  document.getElementById("intensityControl").value;
     video.volume = vol;
+    if(vol!=0){
+      dataMute = vol;
+    }
     ChangeIconVol()
 }
 
@@ -84,11 +86,12 @@ function ChangeIconVol(){
 }
 
 function Mute(){
+    console.log(dataMute);
     if(flagMute == 0){
         document.getElementById("intensityControl").value = 0;
         flagMute = 1;
     }else{
-        document.getElementById("intensityControl").value = 0.2;
+        document.getElementById("intensityControl").value = dataMute;
         flagMute = 0;
     }
     ChangeIconVol();

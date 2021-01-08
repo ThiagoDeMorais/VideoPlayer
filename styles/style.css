@@ -1,8 +1,13 @@
+body{
+   background-color:rgba(19, 17, 128, 0.678);
+}
+
 .container{
     position:relative;
     width: 640px;
     height:360px;
     text-align: center;
+    margin: auto;
 }
 
 .video{

@@ -7,7 +7,7 @@
 </head>
 <body>
     <div   class = "container">
-        <video  id = "video1" class = "video" src="../resources/movie480.webm" poster = "../resources/banner.jpg"></video>
+        <video  id = "video1" class = "video" onended = "stop()" src="../resources/movie480.webm" poster = "../resources/banner.jpg"></video>
         <div class = "controle" onmouseenter = "OntoVideo(this.style)" onmouseleave = "OutVideo(this.style)" >
             <img id = "playPause" class = "btn" onclick="play()" src = "../resources/play.png">
             <img class = "btn" onclick="stop()" src = "../resources/stop.png">

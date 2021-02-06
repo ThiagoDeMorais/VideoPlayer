@@ -16,7 +16,7 @@
             <img class = "btn" onclick = "jump_back()" src = "../resources/jump_back.png">
             <img class = "btn" onclick = "jump_forward()" src = "../resources/jump_foward.png">
             <img id = "vol" class = "btn" onmouseenter = "OntoVol()"  onclick = "Mute()" src = "../resources/audio_intensity_one.png">
-            <input id = "intensityControl" onchange="volume()" type="range" min = "0" max = "1" step="0.01">
+            <input id = "intensityControl" oninput="volume()" type="range" min = "0" max = "1" step="0.01">
 
         </div>
 
